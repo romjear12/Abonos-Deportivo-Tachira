@@ -21,7 +21,7 @@
 				"ligatures": ""
 			},
 			"setIdx": 0,
-			"iconIdx": 359
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -43,7 +43,7 @@
 				"ligatures": ""
 			},
 			"setIdx": 0,
-			"iconIdx": 363
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -65,7 +65,7 @@
 				"ligatures": ""
 			},
 			"setIdx": 0,
-			"iconIdx": 367
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -88,7 +88,7 @@
 				"ligatures": ""
 			},
 			"setIdx": 0,
-			"iconIdx": 370
+			"iconIdx": 3
 		}
 	],
 	"height": 1024,
