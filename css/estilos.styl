@@ -37,7 +37,6 @@ amarillo = #FBF300
 .icon-feed:before {
 	content: "\e603";
 }
-
 body
 	background-color #CBCBCB
 	color black
@@ -48,6 +47,52 @@ body
 a 
 	color black
 	text-decoration none
+footer
+	background-color black
+	background-image url(../imgs/img-footer.png)
+	background-position left
+	background-repeat no-repeat
+	background-size 30% 100%
+	padding 0 1em
+	height 16em
+	vertical-align top
+	#boton-abono 
+		display inline-block
+		width 40%
+		a
+			background-color #D42100 
+			color white
+			font-size 1.4em
+			font-variant small-caps
+			letter-spacing 0.2em
+			line-height 1.4em
+			margin 0.1em 0.1em 0 0
+			padding 0.2em 2.2em
+	#redes-footer
+		display inline-block
+		[class^="icon-"], [class*=" icon-"]
+			font-size 3em
+			color white
+			margin 0 0.1em
+		width 30%
+	#navegacion
+		display inline-block
+		width 23%
+		float right
+		padding-top 1em 
+		p 
+			font-size 1em
+			color amarillo
+			text-indent 3em
+		ul
+			list-style normal
+			li
+				display block
+				margin 0.7em
+				a
+					color white
+					font-size .8em
+					text-decoration underline
 header
 	background-color black
 	background-image url(../imgs/aficion-header.png)
@@ -92,6 +137,9 @@ header
 		display inline-block
 		height 140px
 		width 540px
+main			
+	display block
+	background-color white
 nav
 	background-color amarillo
 	font-size 20px
@@ -121,6 +169,8 @@ nav
 #bloque1
 	display block
 	background-color white
+	padding 1em 1em 0 1em
+	overflow hidden
 	strong
 		-moz-border outset 3px black
 		-ms-border outset 3px black
@@ -135,17 +185,6 @@ nav
 		text-align center
 		text-transform uppercase
 		width 235px
-	.tabla
-		-moz-border solid 1px amarillo
-		-ms-border solid 1px amarillo
-		-o-border solid 1px amarillo
-		-webkit-border solid 1px amarillo
-		background-color white
-		border solid 1px amarillo
-		display inline-block
-		float right
-		margin 0
-		padding 0
 	ul
 		list-style none
 		display block
@@ -172,24 +211,92 @@ nav
 				margin 0
 				padding 0
 				vertical-align top
+	[class^="tabla"], [class*="tabla"]
+		-moz-border solid 1px amarillo
+		-ms-border solid 1px amarillo
+		-o-border solid 1px amarillo
+		-webkit-border solid 1px amarillo
+		background-color white
+		border solid 1px amarillo
+		display inline-block
+		padding 0
+	.tabla1
+		float left
+		margin-right 0.3em
 	#boton-abonate
-		float right
-		clear both
-		margin 0.1em 0
-		padding 0.2em 2.25em
 		background-color #D42100 
-		font-variant small-caps
+		clear both
 		color white
+		float right
 		font-size 60px
+		font-variant small-caps
 		font-weight 300
-		line-height 60px
 		letter-spacing 3px
-
+		line-height 60px
+		margin 0.1em 0.1em 0 0
+		padding 0.2em 2.31em
+	#clasificacion
+		display inline-block
+		float right
+	#slider
+		display inline-block
+		width 650px 
+		height 400px
+		margin 0 auto
+		#img-slider
+			background-image url(../imgs/slider-mediano.jpg)
+			background-repeat no-repeat
+			background-size 650px 318px
+			display block
+			height 320px
+			vertical-align top
+			width 650px 
+		#option-slider
+			display block
+			padding 1em
+			text-align center
+			a
+				background-color amarillo
+				border-radius 50%
+				display inline-block
+				height 1em
+				margin 0 0.3em
+				text-indent -1000px
+				width 1em
+			.botones-activos
+				background-color black				
 #bloque2
 	display block
-	background-color white
-
-main			
+	background-image url(../imgs/fondo-calendario.jpg)
+	background-repeat no-repeat
+	background-size 100% 100%
+	margin 3em 0
+	width 100%
+	height 32em
+	#calendario 
+		background-color rgba(0,0,0,0.7)
+		display inline-block
+		margin 1rem
+		width 52%
+		height 90%
+	#timeline
+		display inline-block
+		float right
+#bloque3
 	display block
-	background-color white
-	padding 0 1em
+	margin 3em 1em
+	width 100%
+	#entradas
+		display inline-block
+		width 50%
+		height 30em
+		#img-precios
+			display block
+			background-image url(../imgs/boletos.png)
+			background-repeat no-repeat
+			background-size 100%
+			text-indent -1000px
+			width 100%
+			height 100%
+	#noticias
+		display inline-block
