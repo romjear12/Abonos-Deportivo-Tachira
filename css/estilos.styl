@@ -52,25 +52,24 @@ footer
 	background-image url(../imgs/img-footer.png)
 	background-position left
 	background-repeat no-repeat
-	background-size 25% 100%
 	padding 0 1em
-	height 18em
-	vertical-align top
+	height 22em
 	#boton-abono 
 		display inline-block
 		width 45%
 		a
 			background-color #D42100 
-			float right
-			position relative
-			right 2em
 			color white
+			float right
 			font-size 2em
 			font-variant small-caps
 			letter-spacing 0.1em
 			line-height 1.6em
 			margin 0.1em 0.1em 0 0
-			padding 0.1em 2.5em
+			padding 0.1em 3em
+			position relative
+			right 0.5em
+			top 0
 	#redes-footer
 		display inline-block
 		text-align center
@@ -87,7 +86,7 @@ footer
 			display block
 			font-size 0.8em
 			letter-spacing 0.1em
-			margin 5.5em 0 .2em 0 
+			margin 9em 0 .2em 0 
 			padding 0
 			text-align center
 		p
@@ -98,22 +97,6 @@ footer
 			margin 0 
 			padding 0
 			text-align center
-		[class^="icon-"], [class*=" icon-"]
-			color white
-			font-size 3em
-			margin 0 0.1em
-	#boton-abono 
-		display inline-block
-		width 40%
-		a
-			background-color #D42100 
-			color white
-			font-size 1.4em
-			font-variant small-caps
-			letter-spacing 0.2em
-			line-height 1.4em
-			margin 0.1em 0.1em 0 0
-			padding 0.2em 2.2em
 	#redes-footer
 		display inline-block
 		[class^="icon-"], [class*=" icon-"]
@@ -129,16 +112,16 @@ footer
 		p 
 			font-size 1em
 			color amarillo
-			text-indent 3em
+			text-indent 2em
 		ul
 			list-style normal
-			margin 2.5em 0 0
+			margin 3.5em 0 0
 			li
 				display block
-				margin 0.7em
+				margin 1em 0
 				a
 					color white
-					font-size .8em
+					font-size 1em
 					text-decoration underline
 header
 	background-color black
@@ -150,6 +133,7 @@ header
 		display inline-block
 		margin 0.2em 0 0.2em 0.2em
 		padding 0
+		width 34rem
 	input
 		color black		
 		margin  0.5em 0.3em 0 5.8em
@@ -182,8 +166,8 @@ header
 		background-repeat no-repeat
 		color transparent
 		display inline-block
-		height 140px
-		width 540px
+		height 9rem
+		width 100%
 main			
 	display block
 	background-color white
@@ -316,34 +300,104 @@ nav
 	display block
 	background-image url(../imgs/fondo-calendario.jpg)
 	background-repeat no-repeat
-	background-size 100% 100%
+	background-size 100% 96%
 	margin 3em 0
-	width 100%
+	padding 1em 1em
 	height 32em
 	#calendario 
 		background-color rgba(0,0,0,0.7)
 		display inline-block
-		margin 1rem
-		width 52%
-		height 90%
+		padding 0 1rem
+		width 51%
+		height 95%
+		h3
+			color amarillo
+			font-variant small-caps
+			font-size 1.5em
+		.jornadas	
+			text-align left
+			p
+				display block
+				color white
+				font-variant small-caps
+				font-size 1.6em
+				margin 1.3em 0 0.2em 0
+			span
+				display block
+				color white
+				font-variant small-caps
+				font-size 1.5em
+				letter-spacing 0.2em
+				text-indent 2.5em
 	#timeline
 		display inline-block
 		float right
 #bloque3
 	display block
-	margin 3em 1em
-	width 100%
+	margin 3em 0
+	padding 0 1em
 	#entradas
 		display inline-block
-		width 50%
 		height 30em
+		width 50%
 		#img-precios
-			display block
 			background-image url(../imgs/boletos.png)
 			background-repeat no-repeat
 			background-size 100%
-			text-indent -1000px
-			width 100%
+			display block
 			height 100%
+			text-indent -1000px
+		#precios 
+			display inline-block
+			float left
+			left 2em
+			position relative
+			top -16.5em
+			width 70%
+			ul
+				list-style none
+				li
+					margin 0.2em 0
+					font-size 1.4em
+					font-variant small-caps
+					span
+						float right
 	#noticias
 		display inline-block
+		float right
+		width 30%
+		border 1px solid #C3C3C3
+		-moz-border 1px solid #C3C3C3
+		-o-border 1px solid #C3C3C3
+		-webkit-border 1px solid #C3C3C3
+		-ms-border 1px solid #C3C3C3
+		section
+			background-color white
+			overflow-y scroll
+			height 25em
+			article
+				display block
+				padding 1em
+				border-bottom 1px solid #C3C3C3
+				-moz-border-bottom 1px solid #C3C3C3
+				-o-border-bottom 1px solid #C3C3C3
+				-webkit-border-bottom 1px solid #C3C3C3
+				-ms-border-bottom 1px solid #C3C3C3
+				overflow hidden
+				p
+					margin 0
+				a
+					float right
+					text-decoration underline
+					color blue
+			article:nth-child(2n)
+				background-color #fef276
+		strong 
+			display block
+			background-color black
+			color white
+			font-size 1.3em
+			padding 0.3em 
+			text-indent 0.5em
+			font-variant small-caps
+				
