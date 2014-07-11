@@ -47,6 +47,8 @@ body
 a 
 	color black
 	text-decoration none
+	font-variant small-caps
+
 footer
 	background-color black
 	background-image url(../imgs/img-footer.png)
@@ -58,15 +60,8 @@ footer
 		display inline-block
 		width 45%
 		a
-			background-color #D42100 
-			color white
 			float right
-			font-size 2em
-			font-variant small-caps
-			letter-spacing 0.1em
-			line-height 1.6em
 			margin 0.1em 0.1em 0 0
-			padding 0.1em 3em
 			position relative
 			right 0.5em
 			top 0
@@ -123,24 +118,80 @@ footer
 					color white
 					font-size 1em
 					text-decoration underline
+input[type="password"]
+	-moz-border-radius 3px
+	-ms-border-radius 3px
+	-o-border-radius 3px
+	-webkit-border-radius 3px
+	border 2px solid #999
+	border-radius 3px
+	font-size 18px
+	font-variant small-caps
+	height 1.95em
+	line-height 1.5em
+	text-indent 0.7em
+	width 13.3em
+
+input[type="text"]
+	-moz-border-radius 3px
+	-ms-border-radius 3px
+	-o-border-radius 3px
+	-webkit-border-radius 3px
+	border 2px solid #999
+	border-radius 3px
+	font-size 18px
+	font-variant small-caps
+	height 1.95em
+	line-height 1.5em
+	text-indent 0.7em
+	width 13.3em
+
+input[type="date"]
+	-moz-border-radius 3px
+	-ms-border-radius 3px
+	-o-border-radius 3px
+	-webkit-border-radius 3px
+	border 2px solid #999
+	border-radius 3px
+	font-size 18px
+	font-variant small-caps
+	height 1.95em
+	line-height 1.5em
+	text-indent 0.7em
+	width 13.3em
+
+input[type="search"]
+	-moz-border-radius 3px
+	-ms-border-radius 3px
+	-o-border-radius 3px
+	-webkit-border-radius 3px
+	border 1px solid amarillo
+	border-radius 3px
+	font-size 16px
+	font-variant small-caps
+	height 1.87em
+	line-height 1.5em
+	text-indent 0.7em
+	width 11.25em
+input[type="checkbox"]
+	height 2em
+	width 1.5em
 header
 	background-color black
 	background-image url(../imgs/aficion-header.png)
 	background-repeat no-repeat
 	background-position right bottom
+	padding 0 1em
 	h1
 		color transparent
 		display inline-block
-		margin 0.2em 0 0.2em 0.2em
+		margin 0.2em 0 
 		padding 0
 		width 34rem
-	input
-		color black		
-		margin  0.5em 0.3em 0 5.8em
-		height 1.7em
+	input[type="search"]
+		margin  0.5em 0 0 5.8em
 		position relative
-		width 13em
-	[class^="icon-"], [class*=" icon-"]
+	[class^="icon-"], [class*="icon-"]
 		background-color black
 		border-radius 0.9em
 		color #C3C3C3
@@ -155,7 +206,7 @@ header
 		top -0.2em
 	#botones-header
 		position relative
-		margin 4.5em 0.3em 0 0
+		margin-top 5em
 		text-align right
 	#contenedor-botones
 		display inline-block
@@ -168,8 +219,8 @@ header
 		display inline-block
 		height 9rem
 		width 100%
+
 main			
-	display block
 	background-color white
 nav
 	background-color amarillo
@@ -195,7 +246,23 @@ nav
 				-webkit-transition: all .15s ease-in-out;
 				transition: all .15s ease-in-out;
 			a:hover
-				border-bottom: solid 4px black;		
+				border-bottom: solid 4px black;	
+
+.botonabono-medio 
+	background: -moz-linear-gradient(top, rgba(229,49,0,1) 0%, rgba(150,31,0,1) 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(top, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* IE10+ */
+	background: -o-linear-gradient(top, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* Opera 11.10+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,49,0,1)), color-stop(100%,rgba(150,31,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* W3C */
+	color white
+	font-family 'Arial',sans-serif
+	font-size 2rem
+	font-variant small-caps
+	padding 0.1em 3em
+	letter-spacing 0.1em
+	line-height 1.6em
+	text-decoration none	
 
 #bloque1
 	display block
@@ -334,7 +401,7 @@ nav
 		float right
 #bloque3
 	display block
-	margin 3em 0
+	margin 0
 	padding 0 1em
 	#entradas
 		display inline-block
@@ -400,4 +467,11 @@ nav
 			padding 0.3em 
 			text-indent 0.5em
 			font-variant small-caps
+	#patrocinantes
+		display block
+		padding 0 1em
+		margin 0
+		figure 
+			margin 0
+			padding 0
 				
