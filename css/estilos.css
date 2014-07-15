@@ -33,7 +33,7 @@
 body {
   background-color: #cbcbcb;
   color: #000;
-  font-family: Tahoma, Geneva, Kalimati, sans-serif;
+  font-family: 'Helvetica';
   font-size: 16px;
   margin: 0;
   padding: 0 3em;
@@ -74,6 +74,7 @@ footer #redes-footer strong {
   margin: 0.4em 0 1.5em;
   padding: 0;
   text-align: center;
+  font-variant: small-caps;
 }
 footer #redes-footer span {
   color: #fbf300;
@@ -113,6 +114,7 @@ footer #navegacion p {
   font-size: 1em;
   color: #fbf300;
   text-indent: 2em;
+  font-variant: small-caps;
 }
 footer #navegacion ul {
   list-style: normal;
@@ -244,7 +246,7 @@ main {
 }
 nav {
   background-color: #fbf300;
-  font-size: 20px;
+  font-size: 18px;
 }
 nav ul {
   list-style: none;
@@ -355,26 +357,28 @@ nav ul li a:hover {
   border: solid 1px #fbf300;
   display: inline-block;
   padding: 0;
+  vertical-align: top;
 }
 #bloque1 .tabla1 {
-  float: left;
+  display: inline-block;
   margin-right: 0.3em;
 }
 #bloque1 #boton-abonate {
   background-color: #d42100;
-  clear: both;
   color: #fff;
-  float: right;
+  display: inline-block;
   font-size: 60px;
   font-variant: small-caps;
   font-weight: 300;
   letter-spacing: 3px;
   line-height: 60px;
-  margin: 0.1em 0.1em 0 0;
   padding: 0.2em 2.31em;
 }
 #bloque1 #clasificacion {
   display: inline-block;
+  width: 44%;
+  vertical-align: top;
+  text-align: center;
   float: right;
 }
 #bloque1 #slider {
@@ -445,7 +449,7 @@ nav ul li a:hover {
   color: #fff;
   font-variant: small-caps;
   font-size: 1.5em;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-indent: 2.5em;
 }
 #bloque2 #timeline {
