@@ -19,28 +19,45 @@ amarillo = #FBF300
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	border-radius: 1em;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+[class^="icon-"], [class*=" icon-"]
+	&:hover
+		color white
 
 .icon-googleplus:before {
 	content: "\e600";
 }
+.icon-googleplus
+	&:hover
+		background-color red
+
 .icon-facebook:before {
 	content: "\e601";
 }
+.icon-facebook
+	&:hover
+		background-color #4c66a4
 .icon-twitter:before {
 	content: "\e602";
 }
-.icon-feed:before {
+.icon-twitter
+	&:hover
+		background-color #0099CC
+.icon-instagram:before {
 	content: "\e603";
 }
+.icon-instagram
+	&:hover
+		background-color black
 body
 	background-color #CBCBCB
 	color black
-	font-family 'Helvetica';
+	font-family 'Helvetica'
 	font-size 16px
 	margin 0
 	padding 0 3em
@@ -56,7 +73,7 @@ footer
 	background-repeat no-repeat
 	padding 0 1em
 	height 22em
-	#boton-abono 
+	#boton-abono
 		display inline-block
 		width 45%
 		a
@@ -85,7 +102,7 @@ footer
 			margin 9em 0 .2em 0 
 			padding 0
 			text-align center
-		p
+		.link-footer
 			color white
 			font-size 0.9em
 			font-weight bold
@@ -93,6 +110,8 @@ footer
 			margin 0 
 			padding 0
 			text-align center
+			text-decoration underline
+			text-transform lowercase
 	#redes-footer
 		display inline-block
 		[class^="icon-"], [class*=" icon-"]
@@ -106,7 +125,7 @@ footer
 		float right
 		padding-top 1em 
 		p 
-			font-size 1em
+			font-size 1.2em
 			color amarillo
 			text-indent 2em
 			font-variant small-caps
@@ -120,6 +139,8 @@ footer
 					color white
 					font-size 1em
 					text-decoration underline
+					&:hover
+						color gray
 input[type="password"]
 	-moz-border-radius 3px
 	-ms-border-radius 3px
@@ -128,11 +149,10 @@ input[type="password"]
 	border 2px solid #999
 	border-radius 3px
 	font-size 18px
-	font-variant small-caps
 	height 1.95em
 	line-height 1.5em
 	text-indent 0.7em
-	width 13.3em
+	width 15em
 
 input[type="text"]
 	-moz-border-radius 3px
@@ -142,11 +162,10 @@ input[type="text"]
 	border 2px solid #999
 	border-radius 3px
 	font-size 18px
-	font-variant small-caps
 	height 1.95em
 	line-height 1.5em
 	text-indent 0.7em
-	width 13.3em
+	width 15em
 
 input[type="date"]
 	-moz-border-radius 3px
@@ -160,7 +179,7 @@ input[type="date"]
 	height 1.95em
 	line-height 1.5em
 	text-indent 0.7em
-	width 13.3em
+	width 15em
 
 input[type="search"]
 	-moz-border-radius 3px
@@ -175,13 +194,16 @@ input[type="search"]
 	line-height 1.5em
 	text-indent 0.7em
 	width 11.25em
+
 input[type="checkbox"]
+	display inline-block
 	height 2em
 	width 1.5em
 header
 	background-color black
 	background-image url(../imgs/aficion-header.png)
 	background-repeat no-repeat
+	background-size 35%
 	background-position right bottom
 	padding 0 1em
 	h1
@@ -189,13 +211,16 @@ header
 		display inline-block
 		margin 0.2em 0 
 		padding 0
-		width 34rem
+		width 45%
+		vertical-align top
+	a 
+		text-indent -1000px
 	input[type="search"]
 		margin  0.5em 0 0 5.8em
 		position relative
 	[class^="icon-"], [class*="icon-"]
 		background-color black
-		border-radius 0.9em
+		border-radius 1em
 		color #C3C3C3
 		font-size 1.8em
 	#boton-sesion
@@ -206,6 +231,9 @@ header
 		padding 0.1em 0.8em
 		position relative
 		top -0.2em
+		&:hover
+			background-color amarillo
+			color gray
 	#botones-header
 		position relative
 		margin-top 5em
@@ -215,15 +243,24 @@ header
 		float right
 	#logo
 		background-image url(../imgs/logo-completo.png)
-		background-position left top
+		background-position left center
 		background-repeat no-repeat
+		background-size 100%
 		color transparent
 		display inline-block
 		height 9rem
 		width 100%
+h2
+	font-variant small-caps
+	font-size 2em
+	font-weight bold
+	display inline-block
+	margin 0
+	padding 0
 
 main			
 	background-color white
+	padding 2em 1em
 nav
 	background-color amarillo
 	font-size 18px
@@ -239,7 +276,7 @@ nav
 				color: black;
 				display: block;
 				font-variant small-caps
-				padding: 0.4em 3.5em;
+				padding: 0.5em 3em;
 				text-align: center;
 				text-decoration: none;	
 				border-bottom: solid 4px transparent;
@@ -247,29 +284,70 @@ nav
 				-moz-transition: all .15s ease-in-out;
 				-webkit-transition: all .15s ease-in-out;
 				transition: all .15s ease-in-out;
-			a:hover
-				border-bottom: solid 4px black;	
+				&:hover
+					border-bottom: solid 4px black;	
 
-.botonabono-medio 
-	background: -moz-linear-gradient(top, rgba(229,49,0,1) 0%, rgba(150,31,0,1) 100%); /* FF3.6+ */
-	background: -ms-linear-gradient(top, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* IE10+ */
-	background: -o-linear-gradient(top, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* Opera 11.10+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,49,0,1)), color-stop(100%,rgba(150,31,0,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: linear-gradient(to bottom, rgba(229,49,0,1) 0%,rgba(150,31,0,1) 100%); /* W3C */
+	
+.boton-abonate-medio 
+	background: rgba(229,49,0,1)
 	color white
-	font-family 'Arial',sans-serif
 	font-size 2rem
 	font-variant small-caps
 	padding 0.1em 3em
 	letter-spacing 0.1em
 	line-height 1.6em
-	text-decoration none	
+	text-decoration none
+	border 1px solid transparent
+	&:hover
+			border 1px solid white
+			text-decoration underline
+			background rgba(229,49,0,0.9)
+.centro
+	display block
+	text-align center
+	padding-bottom 2em
+	margin-top 1em
 
+.arc-excel
+	width 300px
+	display inline-block
+	a
+		background url(../imgs/excel-logo.png) no-repeat
+		background-size cover
+		width 256px
+		height 256px
+		display block
+		text-indent -100em
+		color transparent
+.arc-pdf
+	width 300px
+	display inline-block
+	a	
+		background url(../imgs/pdf_logo.png) no-repeat
+		background-size cover
+		width 256px
+		height 256px
+		display block
+		text-decoration none
+		text-indent -100em
+#imagen-precios
+	margin 0 auto
+	padding 0
+	background url(../imgs/Estadio-precios.png) no-repeat 
+	background-size cover
+	width 540px
+	height 380px
+
+.align-left
+	text-align left
+.titulo-secundario
+	display block
+	padding 2em 0 0
+	text-align center
 #bloque1
 	display block
 	background-color white
-	padding 1em 1em 0 1em
+	padding 1em 0
 	overflow hidden
 	strong
 		-moz-border outset 3px black
@@ -324,16 +402,19 @@ nav
 	.tabla1
 		display inline-block
 		margin-right 0.3em
-	#boton-abonate
-		background-color #D42100 
+	#boton-abonate-grande
+		background: rgba(229,49,0,1)
 		color white
 		display inline-block
 		font-size 60px
 		font-variant small-caps
-		font-weight 300
 		letter-spacing 3px
 		line-height 60px
-		padding 0.2em 2.31em
+		padding 0.2em 0
+		width 100%
+		&:hover
+			text-decoration underline
+			background rgba(229,49,0,0.9)
 	#clasificacion
 		display inline-block
 		width 44%
@@ -345,14 +426,56 @@ nav
 		width 650px 
 		height 400px
 		margin 0 auto
-		#img-slider
-			background-image url(../imgs/slider-mediano.jpg)
-			background-repeat no-repeat
-			background-size 650px 318px
-			display block
-			height 320px
-			vertical-align top
+		.container
 			width 650px 
+			height 320px
+			margin 0 auto
+			overflow hidden
+			position relative
+			.slider-interno
+				width 2600px
+				left 0px
+				position absolute
+				-webkit-transition:all 1.3s ease;
+			    -moz-transition:all 1.3s ease;
+			    -o-transition:all 1.3s ease;
+			    -ms-transition:all 1.3s ease;		
+			    transition:all 1.3s ease;
+				[id^="img-slider"],[id*="img-slider"]
+					padding 0
+					margin 0
+					height 320px
+					width 650px 
+					float left
+					position relative
+					.texto-slider
+						position absolute
+						bottom 0
+						display block
+						width 100%
+						text-align right
+						a
+							display block
+							font-size 2em
+							padding 0.5em 0.5em 
+							color white
+							background-color rgba(0,0,0,0.5)
+							&:hover
+								text-decoration underline
+								color amarillo
+
+				#img-slider1
+					background-image url(../imgs/slider-mediano.jpg)
+					background-repeat no-repeat
+					background-size cover
+				#img-slider2
+					background-image url(../imgs/abono-corporativo.png)
+					background-repeat no-repeat
+					background-size cover
+				#img-slider3
+					background-image url(../imgs/aniversario.png)
+					background-repeat no-repeat
+					background-size cover
 		#option-slider
 			display block
 			padding 1em
@@ -365,8 +488,11 @@ nav
 				margin 0 0.3em
 				text-indent -1000px
 				width 1em
+				cursor pointer
+				&:hover		
+					background-color black
 			.botones-activos
-				background-color black				
+				background-color black		
 #bloque2
 	display block
 	background-image url(../imgs/fondo-calendario.jpg)
@@ -381,12 +507,12 @@ nav
 		padding 0 1rem
 		width 51%
 		height 95%
-		h3
+		h2
 			color amarillo
-			font-variant small-caps
-			font-size 1.5em
+			margin-top 0.5em
 		.jornadas	
 			text-align left
+			text-indent 1em
 			p
 				display block
 				color white
@@ -400,13 +526,23 @@ nav
 				font-size 1.5em
 				letter-spacing 0.1em
 				text-indent 2.5em
+		.link-calendario
+			margin-top 1em
+			text-align right
+			a
+				color amarillo
+				text-decoration underline
+				font-variant small-caps
+				font-size 1.2em
+				font-weight bold
+
 	#timeline
 		display inline-block
 		float right
 #bloque3
 	display block
 	margin 0
-	padding 0 1em
+	padding 0
 	#entradas
 		display inline-block
 		height 30em
@@ -423,7 +559,7 @@ nav
 			float left
 			left 2em
 			position relative
-			top -16.5em
+			top -17.5em
 			width 70%
 			ul
 				list-style none
@@ -431,6 +567,7 @@ nav
 					margin 0.2em 0
 					font-size 1.4em
 					font-variant small-caps
+					background-color white
 					span
 						float right
 	#noticias
@@ -478,4 +615,668 @@ nav
 		figure 
 			margin 0
 			padding 0
-				
+
+/* Cambios 24-07*/
+.boton-pequeño-rojo
+	background: rgba(229,49,0,1)
+	color white
+	font-size 30px
+	font-variant small-caps
+	margin 0
+	padding 0.1em 1.4em
+	text-decoration none
+
+.boton-mediano-rojo
+	background: rgba(229,49,0,1)
+	color white
+	font-size 45px
+	font-variant small-caps
+	margin 0
+	padding 0.1em 1.4em
+	text-decoration none
+
+.boton-grande-rojo
+	background: rgba(229,49,0,1)
+	color white
+	font-size 60px
+	font-variant small-caps
+	margin 0
+	padding 0.1em 1.4em
+	text-decoration none
+
+.boton-pequeño-amarillo
+	background-color amarillo
+	color #333
+	font-size 30px
+	font-variant small-caps
+	margin 0
+	padding 0.1em 1.4em
+	text-decoration none
+	border none
+	&:hover
+		border-bottom 2px solid black
+		color black
+
+.boton-mediano-amarillo,input[type="button"],input[type="submit"]
+	background-color amarillo
+	color #333
+	font-size 40px
+	font-variant small-caps
+	margin 0
+	padding 0.1em 1.2em
+	text-decoration none
+	border-bottom 4px solid transparent
+	border-right none
+	border-left none
+	border-top 4px solid transparent
+	&:hover
+		border-bottom 4px solid black
+		color black
+
+.pasos-registro
+	display block
+	margin 0
+	padding 0
+	text-align left
+	p
+		font-variant small-caps
+		font-size 1.6em
+		margin-top 0
+		padding 0
+
+.viñeta
+	display inline-block
+	background amarillo
+	font-size 40px
+	font-weight bold
+	padding 0.1em 0.2em
+
+.caja-izquierda
+	position relative
+	width 60%
+	display inline-block
+	padding 0 0.5em 0 0
+	border-right 1px #CCC solid
+	z-index 1
+
+.caja-derecha
+	position relative
+	width 38%
+	display inline-block
+	text-align center
+	vertical-align top
+	padding 0 
+
+.caja-registro
+	position relative
+	width 31.7%
+	display inline-block
+	text-align center
+	vertical-align top
+	padding 1em 0.5em 
+
+.contenedor-boton
+	display block
+	margin 0
+	padding 0
+	margin-top 12em
+	text-align right
+h3
+	color black
+	font-size 40px
+	font-variant small-caps
+	font-weight bold
+	margin 0
+p
+	font-size 16px
+	line-height 1.2em
+	color #333
+
+.formulario 
+	margin-top 3em
+
+.formulario-registro
+	margin 0
+
+.inputs-formulario
+	margin 1em 0
+	padding 0
+
+.boton-formulario
+	margin 3em 0 1em 0
+	padding 0
+
+.radio-formulario
+	margin 1em 0
+	padding 0
+
+.centrado	
+	display block
+	width 200px	
+	margin 0 auto
+
+.margen-izq
+	margin-left 15em
+
+.margen-dere
+	margin-right 17em
+
+.centrado-grande	
+	display block
+	width 1000px	
+	margin 4em auto 2em
+
+#centrado-404	
+	display block
+	width 1060px	
+	margin 2em auto 2em
+
+.link-formulario
+	text-decoration underline
+	color blue
+	font-size 0.9em
+
+#page404
+	display inline-block
+	background url(../imgs/caution.png)
+	background-size 100%
+	width 256px
+	height 256px
+	margin 0 1em 0 0
+	padding 0
+	opacity 0.2
+
+.inline
+	display inline-block
+	vertical-align top
+	margin-top 3.8em
+	h3
+		font-size 7em
+		color #333
+.right
+	float right
+
+#fondo-iniciosesion
+	position absolute
+	width 99%
+	height 98%
+	margin 0
+	padding 0
+	z-index -1
+	top 0
+	figure
+		background url(../imgs/fondo-iniciarsesion.jpg) no-repeat
+		background-size cover
+		width 100%
+		height 100%
+		margin 0 
+		padding 0
+.margen-izquierdo
+	margin-left 5em
+
+#mapa-contacto
+	margin 2em 0
+
+.texto-imagen
+	background-color rgba(0,0,0,0.2)
+	color white
+	text-align center
+	text-shadow 2px 2px gray
+	-moz-text-shadow 2px 2px gray
+	-o-text-shadow 2px 2px gray
+	-webkit-text-shadow 2px 2px gray
+	-ms-text-shadow 2px 2px gray
+
+.direccion-formulario
+	-moz-border-radius 3px
+	-ms-border-radius 3px
+	-o-border-radius 3px
+	-webkit-border-radius 3px
+	border 2px solid #999
+	border-radius 3px
+	font-size 18px
+	font-variant small-caps
+	line-height 1.2em
+	text-indent 0.7em
+	width 15em
+
+textarea
+	-moz-border-radius 3px
+	-ms-border-radius 3px
+	-o-border-radius 3px
+	-webkit-border-radius 3px
+	border 2px solid #999
+	border-radius 3px
+	font-size 18px
+	font-variant small-caps
+	line-height 1.2em
+	text-indent 0.7em
+	width 25em
+
+.etiquetas-input
+	font-size 1em
+	color black
+	position relative 
+	top -0.7em
+	margin-right 1em
+	font-variant small-caps
+
+.bloque-pasos
+	display block
+	padding 0 2em
+	margin-top 1em
+	text-align right
+	&:nth-child(2n)
+		text-align left
+
+.pasos 
+	display inline-block
+	width 50%
+	figure
+		width 26em
+		height 16em
+	#r1
+		background url(../imgs/Registro-capture.png) no-repeat
+		background-size 100%
+	#r2 
+		background url(../imgs/Estadio-precios.png) no-repeat
+		background-size 100%
+	#r3
+		background url(../imgs/calendario.png) no-repeat
+		background-size 100%
+	#r4 
+		background url(../imgs/carnet-capture.png) no-repeat
+		background-size 100%
+	p
+		margin 0
+		font-size 1.6em
+		font-variant small-caps
+		line-height 1em
+
+.caja-izq-usuario
+	position relative
+	width 20%
+	display inline-block
+	text-align center
+	vertical-align top
+
+.caja-der-usuario
+	position relative
+	width 79%
+	display inline-block
+	text-align center
+	vertical-align top
+.caja-calendario
+	display block
+	margin 0 auto
+	text-align center
+	margin 1.5em 0
+	padding 0
+
+.caja-perfil
+	background-color amarillo
+	padding 1em 0.5em 2em 
+	margin-right 1em
+	#membrete
+		display block
+		margin 1em 0
+		figure
+			display inline-block
+			margin 0 0.3em 0 0
+			padding 0
+			background url(../imgs/cara-abonado.png) no-repeat
+			background-size cover
+			width 57px
+			height 54px
+		strong 
+			font-size 1.5em
+			font-variant small-caps
+
+	p
+		text-align left
+		margin 0
+		font-size 0.9em
+		line-height 1.6em
+		padding 0
+
+#formato-carnet
+	padding 1em 1em
+	display block
+	margin 0 auto
+	width 450px
+	height 250px
+	background url(../imgs/fondo-tarjeta-abono.jpg) no-repeat
+	background-size cover
+	position relative
+	border-radius 10px
+
+#inf-carnet
+	position absolute
+	bottom 1em
+	width 100%
+	display block
+	text-align left
+	figure 
+		display inline-block
+		margin 0
+		padding 0
+		background url(../imgs/cara-abonado.png) no-repeat
+		background-size cover
+		background-color white
+		width 25%
+		height 120px
+
+#datos-carnet
+	width 65%
+	padding 0.4em
+	background-color white
+	display inline-block
+	border-radius 5px
+	strong
+		display block
+		font-size 1.4em
+		margin 0.3em 0
+
+	p
+		text-align left
+		font-size 1.2em
+		margin 0.3em 0
+
+
+
+.partido
+	display block
+	margin 0.2em auto
+	text-align center
+	padding 0
+	figure 
+		position relative
+		bottom -1em
+		width 64px
+		height 64px
+		display inline-block 
+		margin 0
+		padding 0
+	p
+		font-size 1.4em
+		font-variant small-caps
+		color black
+		margin 0
+		display inline-block
+
+.informacion
+	display block
+	margin 0.1em auto
+	text-align center
+	padding 0
+	p
+		font-size 1em
+		font-variant small-caps
+		color #333
+
+#tachira
+	background url(../imgs/equipos/tachira.png) no-repeat
+	background-size 100%
+#atletico-ven
+	background url(../imgs/equipos/atletico-venezuela.png) no-repeat
+	background-size 100%
+#llaneros
+	background url(../imgs/equipos/llaneros.png) no-repeat
+	background-size 100%
+#portuguesa
+	background url(../imgs/equipos/portuguesa.png) no-repeat
+	background-size 100%
+#aragua
+	background url(../imgs/equipos/aragua.png) no-repeat
+	background-size 100%
+#zulia
+	background url(../imgs/equipos/zulia.png) no-repeat
+	background-size 100%
+#tucanes
+	background url(../imgs/equipos/tucanes.png) no-repeat
+	background-size 100%
+#anzoategui
+	background url(../imgs/equipos/anzoategui.png) no-repeat
+	background-size 100%
+#carabobo
+	background url(../imgs/equipos/carabobo.png) no-repeat
+	background-size 100%
+#petare
+	background url(../imgs/equipos/petare.png) no-repeat
+	background-size 100%
+#mineros
+	background url(../imgs/equipos/mineros.png) no-repeat
+	background-size 100%
+#metropolitanos
+	background url(../imgs/equipos/metropolitanos.png) no-repeat
+	background-size 100%
+#estudiantes
+	background url(../imgs/equipos/estudiantes.png) no-repeat
+	background-size 100%
+#lara
+	background url(../imgs/equipos/lara.png) no-repeat
+	background-size 100%
+#laguaira
+	background url(../imgs/equipos/laguaira.png) no-repeat
+	background-size 100%
+#zamora
+	background url(../imgs/equipos/zamora.png) no-repeat
+	background-size 100%
+#caracas
+	background url(../imgs/equipos/caracas.png) no-repeat
+	background-size 100%
+#trujillanos
+	background url(../imgs/equipos/trujillanos.png) no-repeat
+	background-size 100%
+
+section {
+  list-style: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+section ul {
+  margin: 0em;
+  padding: 0.4em 0.5em;
+}
+section ul li {
+  list-style: none;
+  background-color: #cbcbcb;
+}
+section ul li a {
+  font-size: 1.2em;
+  padding: 0em 1em;
+  color: #000;
+  font-weight: normal;
+}
+section #menu-adm {
+  padding: 3em 0em 1em 1em;
+  width: 20%;
+  height: 300px;
+  box-shadow: 1px -4px 3px 0px;
+  display: inline-block;
+  overflow: hidden;
+}
+section #menu-adm a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #cbcbcb;
+}
+section li ul {
+  display: none;
+  min-width: 100px;
+  margin-right: 0em;
+}
+section li:hover > ul {
+  display: block;
+}
+.desplegable {
+  background-color: #cbcbcb;
+  color: #fff;
+  font-weight: bold;
+}
+section #usuario-adm {
+  background-image: url("../imgs/cara-abonado.png");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+section #rol {
+  margin-top: 0.5em;
+  display: inline-block;
+  margin-left: 3.3em;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+section #contenido {
+  display: inline-block;
+  width: 78%;
+  float: right;
+}
+.cuerpo{
+  padding: 2em;
+  text-align center
+}
+.titulo-adm {
+  padding-top: 1.5em;
+  font-size: 35px;
+  text-align: center;
+}
+.CSSTableGenerator {
+  margin: 4em 5.5em;
+  padding: 0px;
+  width: 80%;
+  border: 1px solid #fbf300;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.CSSTableGenerator table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.CSSTableGenerator tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.CSSTableGenerator tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.CSSTableGenerator tr:nth-child(odd) {
+  background-color: #fbf300;
+}
+.CSSTableGenerator tr:nth-child(even) {
+  background-color: #fff;
+}
+.CSSTableGenerator td {
+  vertical-align: middle;
+  border: 1px solid #bfbf00;
+  border-width: 0px 1px 1px 0px;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #000;
+}
+.CSSTableGenerator tr:hover{
+  background-color:#cbcbcb;
+}
+
+.CSSTableGenerator tr:last-child td {
+  border-width: 0px 1px 0px 0px;
+}
+.CSSTableGenerator tr td:last-child {
+  border-width: 0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:last-child td:last-child {
+  border-width: 0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td:first-child {
+  border-width: 0px 1px 1px 0px; 
+}
+.CSSTableGenerator tr:first-child td:last-child {
+  border-width: 0px 0px 1px 1px;
+}
+.CSSTableGenerator tr:first-child {
+  background-color: white;
+}
+.cuerpo{
+  padding: 3em 5em;
+  display: block;
+  background-position: center;
+}
+.contenedor-input{
+  display: inline-block;
+  padding: 1em 0em;
+  width: 300px;
+  margin: 0;
+}
+.boton-abonate-medio1 {
+  background: -moz-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* FF3.6+ */
+  background: -ms-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* IE10+ */
+  background: -o-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* Opera 11.10+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e53100), color-stop(100%, #961f00));
+/* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom, #e53100 0%, #961f00 100%);
+/* W3C */
+  color: #fff;
+  font-size: 1em;
+  font-variant: small-caps;
+  padding: 0.1em 2em;
+  text-decoration: none;
+  height: 2.5em;
+  margin: 1em 0 2em 0;
+  float: right;
+  display: block;
+  text-align: center;
+
+}
+.boton-abonate-medio1:hover {
+  background: #961f00;
+}
+.compra-abono-sections{
+  margin-left: 6em;
+}
+.compra-abono-sections label {
+  display:  block;
+  font-size:  1.5em;
+  color:  black;
+  margin: 1em 0;
+}
+section .cuerpo label{
+  font-size: 1.2em;
+  padding-right: 1em;
+}

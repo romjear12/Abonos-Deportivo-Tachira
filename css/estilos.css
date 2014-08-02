@@ -14,21 +14,38 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  border-radius: 1em;
 /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+[class^="icon-"]:hover,
+[class*=" icon-"]:hover {
+  color: #fff;
+}
 .icon-googleplus:before {
   content: "\e600";
+}
+.icon-googleplus:hover {
+  background-color: #f00;
 }
 .icon-facebook:before {
   content: "\e601";
 }
+.icon-facebook:hover {
+  background-color: #4c66a4;
+}
 .icon-twitter:before {
   content: "\e602";
 }
-.icon-feed:before {
+.icon-twitter:hover {
+  background-color: #09c;
+}
+.icon-instagram:before {
   content: "\e603";
+}
+.icon-instagram:hover {
+  background-color: #000;
 }
 body {
   background-color: #cbcbcb;
@@ -85,7 +102,7 @@ footer #redes-footer span {
   padding: 0;
   text-align: center;
 }
-footer #redes-footer p {
+footer #redes-footer .link-footer {
   color: #fff;
   font-size: 0.9em;
   font-weight: bold;
@@ -93,6 +110,8 @@ footer #redes-footer p {
   margin: 0;
   padding: 0;
   text-align: center;
+  text-decoration: underline;
+  text-transform: lowercase;
 }
 footer #redes-footer {
   display: inline-block;
@@ -111,7 +130,7 @@ footer #navegacion {
   padding-top: 1em;
 }
 footer #navegacion p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fbf300;
   text-indent: 2em;
   font-variant: small-caps;
@@ -129,6 +148,9 @@ footer #navegacion ul li a {
   font-size: 1em;
   text-decoration: underline;
 }
+footer #navegacion ul li a:hover {
+  color: #808080;
+}
 input[type="password"] {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -137,11 +159,10 @@ input[type="password"] {
   border: 2px solid #999;
   border-radius: 3px;
   font-size: 18px;
-  font-variant: small-caps;
   height: 1.95em;
   line-height: 1.5em;
   text-indent: 0.7em;
-  width: 13.3em;
+  width: 15em;
 }
 input[type="text"] {
   -moz-border-radius: 3px;
@@ -151,11 +172,10 @@ input[type="text"] {
   border: 2px solid #999;
   border-radius: 3px;
   font-size: 18px;
-  font-variant: small-caps;
   height: 1.95em;
   line-height: 1.5em;
   text-indent: 0.7em;
-  width: 13.3em;
+  width: 15em;
 }
 input[type="date"] {
   -moz-border-radius: 3px;
@@ -169,7 +189,7 @@ input[type="date"] {
   height: 1.95em;
   line-height: 1.5em;
   text-indent: 0.7em;
-  width: 13.3em;
+  width: 15em;
 }
 input[type="search"] {
   -moz-border-radius: 3px;
@@ -186,6 +206,7 @@ input[type="search"] {
   width: 11.25em;
 }
 input[type="checkbox"] {
+  display: inline-block;
   height: 2em;
   width: 1.5em;
 }
@@ -193,6 +214,7 @@ header {
   background-color: #000;
   background-image: url("../imgs/aficion-header.png");
   background-repeat: no-repeat;
+  background-size: 35%;
   background-position: right bottom;
   padding: 0 1em;
 }
@@ -201,7 +223,11 @@ header h1 {
   display: inline-block;
   margin: 0.2em 0;
   padding: 0;
-  width: 34rem;
+  width: 45%;
+  vertical-align: top;
+}
+header a {
+  text-indent: -1000px;
 }
 header input[type="search"] {
   margin: 0.5em 0 0 5.8em;
@@ -210,7 +236,7 @@ header input[type="search"] {
 header [class^="icon-"],
 header [class*="icon-"] {
   background-color: #000;
-  border-radius: 0.9em;
+  border-radius: 1em;
   color: #c3c3c3;
   font-size: 1.8em;
 }
@@ -223,6 +249,10 @@ header #boton-sesion {
   position: relative;
   top: -0.2em;
 }
+header #boton-sesion:hover {
+  background-color: #fbf300;
+  color: #808080;
+}
 header #botones-header {
   position: relative;
   margin-top: 5em;
@@ -234,15 +264,25 @@ header #contenedor-botones {
 }
 header #logo {
   background-image: url("../imgs/logo-completo.png");
-  background-position: left top;
+  background-position: left center;
   background-repeat: no-repeat;
+  background-size: 100%;
   color: transparent;
   display: inline-block;
   height: 9rem;
   width: 100%;
 }
+h2 {
+  font-variant: small-caps;
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
 main {
   background-color: #fff;
+  padding: 2em 1em;
 }
 nav {
   background-color: #fbf300;
@@ -262,7 +302,7 @@ nav ul li a {
   color: #000;
   display: block;
   font-variant: small-caps;
-  padding: 0.4em 3.5em;
+  padding: 0.5em 3em;
   text-align: center;
   text-decoration: none;
   border-bottom: solid 4px transparent;
@@ -274,32 +314,74 @@ nav ul li a {
 nav ul li a:hover {
   border-bottom: solid 4px #000;
 }
-.botonabono-medio {
-  background: -moz-linear-gradient(top, #e53100 0%, #961f00 100%);
-/* FF3.6+ */
-  background: -ms-linear-gradient(top, #e53100 0%, #961f00 100%);
-/* IE10+ */
-  background: -o-linear-gradient(top, #e53100 0%, #961f00 100%);
-/* Opera 11.10+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e53100), color-stop(100%, #961f00));
-/* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e53100 0%, #961f00 100%);
-/* Chrome10+,Safari5.1+ */
-  background: linear-gradient(to bottom, #e53100 0%, #961f00 100%);
-/* W3C */
+.boton-abonate-medio {
+  background: #e53100;
   color: #fff;
-  font-family: 'Arial', sans-serif;
   font-size: 2rem;
   font-variant: small-caps;
   padding: 0.1em 3em;
   letter-spacing: 0.1em;
   line-height: 1.6em;
   text-decoration: none;
+  border: 1px solid transparent;
+}
+.boton-abonate-medio:hover {
+  border: 1px solid #fff;
+  text-decoration: underline;
+  background: rgba(229,49,0,0.9);
+}
+.centro {
+  display: block;
+  text-align: center;
+  padding-bottom: 2em;
+  margin-top: 1em;
+}
+.arc-excel {
+  width: 300px;
+  display: inline-block;
+}
+.arc-excel a {
+  background: url("../imgs/excel-logo.png") no-repeat;
+  background-size: cover;
+  width: 256px;
+  height: 256px;
+  display: block;
+  text-indent: -100em;
+  color: transparent;
+}
+.arc-pdf {
+  width: 300px;
+  display: inline-block;
+}
+.arc-pdf a {
+  background: url("../imgs/pdf_logo.png") no-repeat;
+  background-size: cover;
+  width: 256px;
+  height: 256px;
+  display: block;
+  text-decoration: none;
+  text-indent: -100em;
+}
+#imagen-precios {
+  margin: 0 auto;
+  padding: 0;
+  background: url("../imgs/Estadio-precios.png") no-repeat;
+  background-size: cover;
+  width: 540px;
+  height: 380px;
+}
+.align-left {
+  text-align: left;
+}
+.titulo-secundario {
+  display: block;
+  padding: 2em 0 0;
+  text-align: center;
 }
 #bloque1 {
   display: block;
   background-color: #fff;
-  padding: 1em 1em 0 1em;
+  padding: 1em 0;
   overflow: hidden;
 }
 #bloque1 strong {
@@ -363,16 +445,20 @@ nav ul li a:hover {
   display: inline-block;
   margin-right: 0.3em;
 }
-#bloque1 #boton-abonate {
-  background-color: #d42100;
+#bloque1 #boton-abonate-grande {
+  background: #e53100;
   color: #fff;
   display: inline-block;
   font-size: 60px;
   font-variant: small-caps;
-  font-weight: 300;
   letter-spacing: 3px;
   line-height: 60px;
-  padding: 0.2em 2.31em;
+  padding: 0.2em 0;
+  width: 100%;
+}
+#bloque1 #boton-abonate-grande:hover {
+  text-decoration: underline;
+  background: rgba(229,49,0,0.9);
 }
 #bloque1 #clasificacion {
   display: inline-block;
@@ -387,21 +473,74 @@ nav ul li a:hover {
   height: 400px;
   margin: 0 auto;
 }
-#bloque1 #slider #img-slider {
+#bloque1 #slider .container {
+  width: 650px;
+  height: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  -moz-transition: all 1.3s ease;
+  -o-transition: all 1.3s ease;
+  -ms-transition: all 1.3s ease;
+  transition: all 1.3s ease;
+}
+#bloque1 #slider .container .slider-interno {
+  width: 2600px;
+  left: 0px;
+  position: absolute;
+  -webkit-transition: all 1.3s ease;
+}
+#bloque1 #slider .container [id^="img-slider"],
+#bloque1 #slider .container [id*="img-slider"] {
+  padding: 0;
+  margin: 0;
+  height: 320px;
+  width: 650px;
+  float: left;
+  position: relative;
+}
+#bloque1 #slider .container [id^="img-slider"] .texto-slider,
+#bloque1 #slider .container [id*="img-slider"] .texto-slider {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+#bloque1 #slider .container [id^="img-slider"] .texto-slider a,
+#bloque1 #slider .container [id*="img-slider"] .texto-slider a {
+  display: block;
+  font-size: 2em;
+  padding: 0.5em 0.5em;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+}
+#bloque1 #slider .container [id^="img-slider"] .texto-slider a:hover,
+#bloque1 #slider .container [id*="img-slider"] .texto-slider a:hover {
+  text-decoration: underline;
+  color: #fbf300;
+}
+#bloque1 #slider .container #img-slider1 {
   background-image: url("../imgs/slider-mediano.jpg");
   background-repeat: no-repeat;
-  background-size: 650px 318px;
-  display: block;
-  height: 320px;
-  vertical-align: top;
-  width: 650px;
+  background-size: cover;
 }
-#bloque1 #slider #option-slider {
+#bloque1 #slider .container #img-slider2 {
+  background-image: url("../imgs/abono-corporativo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#bloque1 #slider .container #img-slider3 {
+  background-image: url("../imgs/aniversario.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#bloque1 #option-slider {
   display: block;
   padding: 1em;
   text-align: center;
 }
-#bloque1 #slider #option-slider a {
+#bloque1 #option-slider a {
   background-color: #fbf300;
   border-radius: 50%;
   display: inline-block;
@@ -409,8 +548,12 @@ nav ul li a:hover {
   margin: 0 0.3em;
   text-indent: -1000px;
   width: 1em;
+  cursor: pointer;
 }
-#bloque1 #slider #option-slider .botones-activos {
+#bloque1 #option-slider a:hover {
+  background-color: #000;
+}
+#bloque1 #option-slider .botones-activos {
   background-color: #000;
 }
 #bloque2 {
@@ -429,13 +572,13 @@ nav ul li a:hover {
   width: 51%;
   height: 95%;
 }
-#bloque2 #calendario h3 {
+#bloque2 #calendario h2 {
   color: #fbf300;
-  font-variant: small-caps;
-  font-size: 1.5em;
+  margin-top: 0.5em;
 }
 #bloque2 #calendario .jornadas {
   text-align: left;
+  text-indent: 1em;
 }
 #bloque2 #calendario .jornadas p {
   display: block;
@@ -452,6 +595,17 @@ nav ul li a:hover {
   letter-spacing: 0.1em;
   text-indent: 2.5em;
 }
+#bloque2 #calendario .link-calendario {
+  margin-top: 1em;
+  text-align: right;
+}
+#bloque2 #calendario .link-calendario a {
+  color: #fbf300;
+  text-decoration: underline;
+  font-variant: small-caps;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 #bloque2 #timeline {
   display: inline-block;
   float: right;
@@ -459,7 +613,7 @@ nav ul li a:hover {
 #bloque3 {
   display: block;
   margin: 0;
-  padding: 0 1em;
+  padding: 0;
 }
 #bloque3 #entradas {
   display: inline-block;
@@ -479,7 +633,7 @@ nav ul li a:hover {
   float: left;
   left: 2em;
   position: relative;
-  top: -16.5em;
+  top: -17.5em;
   width: 70%;
 }
 #bloque3 #entradas #precios ul {
@@ -489,6 +643,7 @@ nav ul li a:hover {
   margin: 0.2em 0;
   font-size: 1.4em;
   font-variant: small-caps;
+  background-color: #fff;
 }
 #bloque3 #entradas #precios ul li span {
   float: right;
@@ -546,4 +701,710 @@ nav ul li a:hover {
 #bloque3 #patrocinantes figure {
   margin: 0;
   padding: 0;
+}
+/* Cambios 24-07*/
+.boton-pequeño-rojo {
+  background: #e53100;
+  color: #fff;
+  font-size: 30px;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0.1em 1.4em;
+  text-decoration: none;
+}
+.boton-mediano-rojo {
+  background: #e53100;
+  color: #fff;
+  font-size: 45px;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0.1em 1.4em;
+  text-decoration: none;
+}
+.boton-grande-rojo {
+  background: #e53100;
+  color: #fff;
+  font-size: 60px;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0.1em 1.4em;
+  text-decoration: none;
+}
+.boton-pequeño-amarillo {
+  background-color: #fbf300;
+  color: #333;
+  font-size: 30px;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0.1em 1.4em;
+  text-decoration: none;
+  border: none;
+}
+.boton-pequeño-amarillo:hover {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+.boton-mediano-amarillo,
+input[type="button"],
+input[type="submit"] {
+  background-color: #fbf300;
+  color: #333;
+  font-size: 40px;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0.1em 1.2em;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+  border-right: none;
+  border-left: none;
+  border-top: 4px solid transparent;
+}
+.boton-mediano-amarillo:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  border-bottom: 4px solid #000;
+  color: #000;
+}
+.pasos-registro {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.pasos-registro p {
+  font-variant: small-caps;
+  font-size: 1.6em;
+  margin-top: 0;
+  padding: 0;
+}
+.viñeta {
+  display: inline-block;
+  background: #fbf300;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0.1em 0.2em;
+}
+.caja-izquierda {
+  position: relative;
+  width: 60%;
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+  border-right: 1px #ccc solid;
+  z-index: 1;
+}
+.caja-derecha {
+  position: relative;
+  width: 38%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  padding: 0;
+}
+.caja-registro {
+  position: relative;
+  width: 31.7%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  padding: 1em 0.5em;
+}
+.contenedor-boton {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 12em;
+  text-align: right;
+}
+h3 {
+  color: #000;
+  font-size: 40px;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin: 0;
+}
+p {
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #333;
+}
+.formulario {
+  margin-top: 3em;
+}
+.formulario-registro {
+  margin: 0;
+}
+.inputs-formulario {
+  margin: 1em 0;
+  padding: 0;
+}
+.boton-formulario {
+  margin: 3em 0 1em 0;
+  padding: 0;
+}
+.radio-formulario {
+  margin: 1em 0;
+  padding: 0;
+}
+.centrado {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+.margen-izq {
+  margin-left: 15em;
+}
+.margen-dere {
+  margin-right: 17em;
+}
+.centrado-grande {
+  display: block;
+  width: 1000px;
+  margin: 4em auto 2em;
+}
+#centrado-404 {
+  display: block;
+  width: 1060px;
+  margin: 2em auto 2em;
+}
+.link-formulario {
+  text-decoration: underline;
+  color: #00f;
+  font-size: 0.9em;
+}
+#page404 {
+  display: inline-block;
+  background: url("../imgs/caution.png");
+  background-size: 100%;
+  width: 256px;
+  height: 256px;
+  margin: 0 1em 0 0;
+  padding: 0;
+  opacity: 0.2;
+}
+.inline {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 3.8em;
+}
+.inline h3 {
+  font-size: 7em;
+  color: #333;
+}
+.right {
+  float: right;
+}
+#fondo-iniciosesion {
+  position: absolute;
+  width: 99%;
+  height: 98%;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  top: 0;
+}
+#fondo-iniciosesion figure {
+  background: url("../imgs/fondo-iniciarsesion.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.margen-izquierdo {
+  margin-left: 5em;
+}
+#mapa-contacto {
+  margin: 2em 0;
+}
+.texto-imagen {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px #808080;
+  -moz-text-shadow: 2px 2px #808080;
+  -o-text-shadow: 2px 2px #808080;
+  -webkit-text-shadow: 2px 2px #808080;
+  -ms-text-shadow: 2px 2px #808080;
+}
+.direccion-formulario {
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 2px solid #999;
+  border-radius: 3px;
+  font-size: 18px;
+  font-variant: small-caps;
+  line-height: 1.2em;
+  text-indent: 0.7em;
+  width: 15em;
+}
+textarea {
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 2px solid #999;
+  border-radius: 3px;
+  font-size: 18px;
+  font-variant: small-caps;
+  line-height: 1.2em;
+  text-indent: 0.7em;
+  width: 25em;
+}
+.etiquetas-input {
+  font-size: 1em;
+  color: #000;
+  position: relative;
+  top: -0.7em;
+  margin-right: 1em;
+  font-variant: small-caps;
+}
+.bloque-pasos {
+  display: block;
+  padding: 0 2em;
+  margin-top: 1em;
+  text-align: right;
+}
+.bloque-pasos:nth-child(2n) {
+  text-align: left;
+}
+.pasos {
+  display: inline-block;
+  width: 50%;
+}
+.pasos figure {
+  width: 26em;
+  height: 16em;
+}
+.pasos #r1 {
+  background: url("../imgs/Registro-capture.png") no-repeat;
+  background-size: 100%;
+}
+.pasos #r2 {
+  background: url("../imgs/Estadio-precios.png") no-repeat;
+  background-size: 100%;
+}
+.pasos #r3 {
+  background: url("../imgs/calendario.png") no-repeat;
+  background-size: 100%;
+}
+.pasos #r4 {
+  background: url("../imgs/carnet-capture.png") no-repeat;
+  background-size: 100%;
+}
+.pasos p {
+  margin: 0;
+  font-size: 1.6em;
+  font-variant: small-caps;
+  line-height: 1em;
+}
+.caja-izq-usuario {
+  position: relative;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.caja-der-usuario {
+  position: relative;
+  width: 79%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.caja-calendario {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin: 1.5em 0;
+  padding: 0;
+}
+.caja-perfil {
+  background-color: #fbf300;
+  padding: 1em 0.5em 2em;
+  margin-right: 1em;
+}
+.caja-perfil #membrete {
+  display: block;
+  margin: 1em 0;
+}
+.caja-perfil #membrete figure {
+  display: inline-block;
+  margin: 0 0.3em 0 0;
+  padding: 0;
+  background: url("../imgs/cara-abonado.png") no-repeat;
+  background-size: cover;
+  width: 57px;
+  height: 54px;
+}
+.caja-perfil #membrete strong {
+  font-size: 1.5em;
+  font-variant: small-caps;
+}
+.caja-perfil p {
+  text-align: left;
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+  padding: 0;
+}
+#formato-carnet {
+  padding: 1em 1em;
+  display: block;
+  margin: 0 auto;
+  width: 450px;
+  height: 250px;
+  background: url("../imgs/fondo-tarjeta-abono.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+}
+#inf-carnet {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+#inf-carnet figure {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: url("../imgs/cara-abonado.png") no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  width: 25%;
+  height: 120px;
+}
+#datos-carnet {
+  width: 65%;
+  padding: 0.4em;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+}
+#datos-carnet strong {
+  display: block;
+  font-size: 1.4em;
+  margin: 0.3em 0;
+}
+#datos-carnet p {
+  text-align: left;
+  font-size: 1.2em;
+  margin: 0.3em 0;
+}
+.partido {
+  display: block;
+  margin: 0.2em auto;
+  text-align: center;
+  padding: 0;
+}
+.partido figure {
+  position: relative;
+  bottom: -1em;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.partido p {
+  font-size: 1.4em;
+  font-variant: small-caps;
+  color: #000;
+  margin: 0;
+  display: inline-block;
+}
+.informacion {
+  display: block;
+  margin: 0.1em auto;
+  text-align: center;
+  padding: 0;
+}
+.informacion p {
+  font-size: 1em;
+  font-variant: small-caps;
+  color: #333;
+}
+#tachira {
+  background: url("../imgs/equipos/tachira.png") no-repeat;
+  background-size: 100%;
+}
+#atletico-ven {
+  background: url("../imgs/equipos/atletico-venezuela.png") no-repeat;
+  background-size: 100%;
+}
+#llaneros {
+  background: url("../imgs/equipos/llaneros.png") no-repeat;
+  background-size: 100%;
+}
+#portuguesa {
+  background: url("../imgs/equipos/portuguesa.png") no-repeat;
+  background-size: 100%;
+}
+#aragua {
+  background: url("../imgs/equipos/aragua.png") no-repeat;
+  background-size: 100%;
+}
+#zulia {
+  background: url("../imgs/equipos/zulia.png") no-repeat;
+  background-size: 100%;
+}
+#tucanes {
+  background: url("../imgs/equipos/tucanes.png") no-repeat;
+  background-size: 100%;
+}
+#anzoategui {
+  background: url("../imgs/equipos/anzoategui.png") no-repeat;
+  background-size: 100%;
+}
+#carabobo {
+  background: url("../imgs/equipos/carabobo.png") no-repeat;
+  background-size: 100%;
+}
+#petare {
+  background: url("../imgs/equipos/petare.png") no-repeat;
+  background-size: 100%;
+}
+#mineros {
+  background: url("../imgs/equipos/mineros.png") no-repeat;
+  background-size: 100%;
+}
+#metropolitanos {
+  background: url("../imgs/equipos/metropolitanos.png") no-repeat;
+  background-size: 100%;
+}
+#estudiantes {
+  background: url("../imgs/equipos/estudiantes.png") no-repeat;
+  background-size: 100%;
+}
+#lara {
+  background: url("../imgs/equipos/lara.png") no-repeat;
+  background-size: 100%;
+}
+#laguaira {
+  background: url("../imgs/equipos/laguaira.png") no-repeat;
+  background-size: 100%;
+}
+#zamora {
+  background: url("../imgs/equipos/zamora.png") no-repeat;
+  background-size: 100%;
+}
+#caracas {
+  background: url("../imgs/equipos/caracas.png") no-repeat;
+  background-size: 100%;
+}
+#trujillanos {
+  background: url("../imgs/equipos/trujillanos.png") no-repeat;
+  background-size: 100%;
+}
+section {
+  list-style: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+section ul {
+  margin: 0em;
+  padding: 0.4em 0.5em;
+}
+section ul li {
+  list-style: none;
+  background-color: #cbcbcb;
+}
+section ul li a {
+  font-size: 1.2em;
+  padding: 0em 1em;
+  color: #000;
+  font-weight: normal;
+}
+section #menu-adm {
+  padding: 3em 0em 1em 1em;
+  width: 20%;
+  height: 300px;
+  box-shadow: 1px -4px 3px 0px;
+  display: inline-block;
+  overflow: hidden;
+}
+section #menu-adm a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #cbcbcb;
+}
+section li ul {
+  display: none;
+  min-width: 100px;
+  margin-right: 0em;
+}
+section li:hover > ul {
+  display: block;
+}
+.desplegable {
+  background-color: #cbcbcb;
+  color: #fff;
+  font-weight: bold;
+}
+section #usuario-adm {
+  background-image: url("../imgs/cara-abonado.png");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+section #rol {
+  margin-top: 0.5em;
+  display: inline-block;
+  margin-left: 3.3em;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+section #contenido {
+  display: inline-block;
+  width: 78%;
+  float: right;
+}
+.cuerpo {
+  padding: 2em;
+  text-align: center;
+}
+.titulo-adm {
+  padding-top: 1.5em;
+  font-size: 35px;
+  text-align: center;
+}
+.CSSTableGenerator {
+  margin: 4em 5.5em;
+  padding: 0px;
+  width: 80%;
+  border: 1px solid #fbf300;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.CSSTableGenerator table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.CSSTableGenerator tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.CSSTableGenerator tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.CSSTableGenerator tr:nth-child(odd) {
+  background-color: #fbf300;
+}
+.CSSTableGenerator tr:nth-child(even) {
+  background-color: #fff;
+}
+.CSSTableGenerator td {
+  vertical-align: middle;
+  border: 1px solid #bfbf00;
+  border-width: 0px 1px 1px 0px;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #000;
+}
+.CSSTableGenerator tr:hover {
+  background-color: #cbcbcb;
+}
+.CSSTableGenerator tr:last-child td {
+  border-width: 0px 1px 0px 0px;
+}
+.CSSTableGenerator tr td:last-child {
+  border-width: 0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:last-child td:last-child {
+  border-width: 0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td:first-child {
+  border-width: 0px 1px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child {
+  border-width: 0px 0px 1px 1px;
+}
+.CSSTableGenerator tr:first-child {
+  background-color: #fff;
+}
+.cuerpo {
+  padding: 3em 5em;
+  display: block;
+  background-position: center;
+}
+.contenedor-input {
+  display: inline-block;
+  padding: 1em 0em;
+  width: 300px;
+  margin: 0;
+}
+.boton-abonate-medio1 {
+  background: -moz-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* FF3.6+ */
+  background: -ms-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* IE10+ */
+  background: -o-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* Opera 11.10+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e53100), color-stop(100%, #961f00));
+/* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e53100 0%, #961f00 100%);
+/* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom, #e53100 0%, #961f00 100%);
+/* W3C */
+  color: #fff;
+  font-size: 1em;
+  font-variant: small-caps;
+  padding: 0.1em 2em;
+  text-decoration: none;
+  height: 2.5em;
+  margin: 1em 0 2em 0;
+  float: right;
+  display: block;
+  text-align: center;
+}
+.boton-abonate-medio1:hover {
+  background: #961f00;
+}
+.compra-abono-sections {
+  margin-left: 6em;
+}
+.compra-abono-sections label {
+  display: block;
+  font-size: 1.5em;
+  color: #000;
+  margin: 1em 0;
+}
+section .cuerpo label {
+  font-size: 1.2em;
+  padding-right: 1em;
 }
