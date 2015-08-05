@@ -1,5 +1,4 @@
 
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,8 +42,29 @@
 	</script>
 </head>
 <body>
-	<?php include ("header.php"); ?>
-	<?php include ("nav.php"); ?>
+	<header>
+		<h1>
+			<a id="logo" title="Abonos Deportivo Táchira" href="index.html">Abonos Deportivo Táchira</a>
+		</h1>
+		<div id="contenedor-botones">
+			<input type="search" placeholder="Buscar...">
+			<div id="botones-header">
+				<a class="icon-facebook" href="https://www.facebook.com/DeportivoTachiraFutbolClub" target="_blank"></a>
+				<a class="icon-googleplus" href="https://plus.google.com/107776646162996845235/posts" target="_blank"></a>
+				<a class="icon-twitter" href="https://twitter.com/dvotachira" target="_blank"></a>
+				<a id="boton-sesion" href="iniciosesion.html">Iniciar sesión</a>
+			</div>
+		</div>
+	</header>
+	<nav>
+		<ul> 
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="precios.html">Precios</a></li>
+			<li><a href="pasos.html">Cómo obtener tu abono</a></li>
+			<li><a href="corporativo.html">Abono Corporativo</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
 	<main>
 		<section id="bloque1">
 			<div id="slider">
@@ -52,22 +72,22 @@
 					<div class="slider-interno">
 						<div id="img-slider1">
 							<div class="texto-slider">
-								<a href="registro.php">¿Que esperas para abonarte? Regístrate.</a>
+								<a href="registro.html">¿Que esperas para abonarte? Regístrate.</a>
 							</div>
 						</div>
 						<div id="img-slider2">
 							<div class="texto-slider">
-								<a href="corporativo.php">Conoce la modalidad de Abono Corporativo</a>
+								<a href="corporativo.html">Conoce la modalidad de Abono Corporativo</a>
 							</div>
 						</div>
 						<div id="img-slider3">
 							<div class="texto-slider">
-								<a href="precios.php">Precios y promociones.</a>
+								<a href="precios.html">Precios y promociones.</a>
 							</div>
 						</div>
 						<div id="img-slider4">
 							<div class="texto-slider">
-								<a href="contacto.php">Siguenos en nuestras redes sociales.</a>
+								<a href="contacto.html">Siguenos en nuestras redes sociales.</a>
 							</div>
 						</div>
 					</div>
@@ -132,7 +152,7 @@
 						</li>
 					</ul>
 				</div>
-				<a id="boton-abonate-grande" href="registro.php">Abónate</a>
+				<a id="boton-abonate-grande" href="registro.html">Abónate</a>
 			</div>
 		</section>
 		<section id="bloque2">
@@ -155,7 +175,7 @@
 					<span>Aragua vs Deportivo Táchira</span>
 				</div>
 				<div class="link-calendario">
-					<a href="calendarioprincipal.php">Ver calendario completo</a>	
+					<a href="calendarioprincipal.html">Ver calendario completo</a>	
 				</div>
 			</div>
 			<div id="timeline">
@@ -166,7 +186,7 @@
 		</section>
 		<section id="bloque3">
 			<div id="entradas">
-				<a href="precios.php" id="img-precios">Precios</a>
+				<a href="precios.html" id="img-precios">Precios</a>
 				<div id="precios">
 					<ul>
 						<li>Popular Norte  <span>Bs  500</span></li>
@@ -207,6 +227,28 @@
 			</div>
 		</section>
 	</main>
-	<?php include("footer.php"); ?>
+	<footer>
+		<div id="boton-abono">
+			<a class="boton-abonate-medio" href="registro.html">Abónate</a>
+		</div>
+		<div id="redes-footer">
+			<strong>¡Síguenos!</strong>
+				<a class="icon-facebook" href="https://www.facebook.com/DeportivoTachiraFutbolClub" target="_blank"></a>
+				<a class="icon-googleplus" href="https://plus.google.com/107776646162996845235/posts" target="_blank"></a>
+				<a class="icon-twitter" href="https://twitter.com/dvotachira" target="_blank"></a>
+			<span>sitio oficial:</span>
+			<a class="link-footer" href="http://www.deportivotachira.com" target="_blank">www.deportivotachira.com</a> 
+		</div>
+		<div id="navegacion">
+			<p>Enlaces de interés</p>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="precios.html">Precios</a></li>
+				<li><a href="pasos.html">Cómo obtener tu abono</a></li>
+				<li><a href="corporativo.html">Abono corporativo</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
